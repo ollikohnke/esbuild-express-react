@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const dotenv = require('dotenv')
-dotenv.config({ path: `${__dirname}/.dotenv` });
+dotenv.config({ path: `${__dirname}/.dot.env` });
 
 const app = express()
 
@@ -16,5 +16,5 @@ app.get('/', (req, res) => {
 // Start the server
 const PORT = process.env.PORT
 app.listen(PORT, () => {
-    console.log(`http://localhost:3001/`);
+    console.log(`http://localhost:${PORT}/`);
 });
