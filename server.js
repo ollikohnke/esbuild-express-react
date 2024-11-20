@@ -1,7 +1,7 @@
 const express = require('express')
 const path = require('path')
 const dotenv = require('dotenv')
-dotenv.config()
+dotenv.config({ path: `${__dirname}/.dotenv` });
 
 const app = express()
 
@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 })
 
 // Start the server
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT
 app.listen(PORT, () => {
-    console.log(`https://beta.opako.xyz/`);
+    console.log(`http://localhost:3001/`);
 });
